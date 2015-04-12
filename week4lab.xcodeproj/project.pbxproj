@@ -14,6 +14,11 @@
 		8A4A2C741AD67FF200E2FC88 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A4A2C731AD67FF200E2FC88 /* Images.xcassets */; };
 		8A4A2C771AD67FF200E2FC88 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A4A2C751AD67FF200E2FC88 /* LaunchScreen.xib */; };
 		8A4A2C831AD67FF200E2FC88 /* week4labTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4A2C821AD67FF200E2FC88 /* week4labTests.m */; };
+		8A4A2C8E1AD680CD00E2FC88 /* AddReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4A2C8D1AD680CD00E2FC88 /* AddReminderViewController.m */; };
+		8A4A2C911AD680EF00E2FC88 /* EditReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4A2C901AD680EF00E2FC88 /* EditReminderViewController.m */; };
+		8A4A2C941AD6810A00E2FC88 /* ReminderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4A2C931AD6810A00E2FC88 /* ReminderListViewController.m */; };
+		8A4A2C971AD6811900E2FC88 /* ReminderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4A2C961AD6811900E2FC88 /* ReminderCell.m */; };
+		8A4A2C9A1AD6813100E2FC88 /* Reminder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4A2C991AD6813100E2FC88 /* Reminder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,16 @@
 		8A4A2C7C1AD67FF200E2FC88 /* week4labTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = week4labTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A4A2C811AD67FF200E2FC88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A4A2C821AD67FF200E2FC88 /* week4labTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = week4labTests.m; sourceTree = "<group>"; };
+		8A4A2C8C1AD680CD00E2FC88 /* AddReminderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddReminderViewController.h; sourceTree = "<group>"; };
+		8A4A2C8D1AD680CD00E2FC88 /* AddReminderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddReminderViewController.m; sourceTree = "<group>"; };
+		8A4A2C8F1AD680EF00E2FC88 /* EditReminderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditReminderViewController.h; sourceTree = "<group>"; };
+		8A4A2C901AD680EF00E2FC88 /* EditReminderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditReminderViewController.m; sourceTree = "<group>"; };
+		8A4A2C921AD6810A00E2FC88 /* ReminderListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReminderListViewController.h; sourceTree = "<group>"; };
+		8A4A2C931AD6810A00E2FC88 /* ReminderListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReminderListViewController.m; sourceTree = "<group>"; };
+		8A4A2C951AD6811900E2FC88 /* ReminderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReminderCell.h; sourceTree = "<group>"; };
+		8A4A2C961AD6811900E2FC88 /* ReminderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReminderCell.m; sourceTree = "<group>"; };
+		8A4A2C981AD6813100E2FC88 /* Reminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reminder.h; sourceTree = "<group>"; };
+		8A4A2C991AD6813100E2FC88 /* Reminder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reminder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +104,16 @@
 				8A4A2C731AD67FF200E2FC88 /* Images.xcassets */,
 				8A4A2C751AD67FF200E2FC88 /* LaunchScreen.xib */,
 				8A4A2C661AD67FF200E2FC88 /* Supporting Files */,
+				8A4A2C8C1AD680CD00E2FC88 /* AddReminderViewController.h */,
+				8A4A2C8D1AD680CD00E2FC88 /* AddReminderViewController.m */,
+				8A4A2C8F1AD680EF00E2FC88 /* EditReminderViewController.h */,
+				8A4A2C901AD680EF00E2FC88 /* EditReminderViewController.m */,
+				8A4A2C921AD6810A00E2FC88 /* ReminderListViewController.h */,
+				8A4A2C931AD6810A00E2FC88 /* ReminderListViewController.m */,
+				8A4A2C951AD6811900E2FC88 /* ReminderCell.h */,
+				8A4A2C961AD6811900E2FC88 /* ReminderCell.m */,
+				8A4A2C981AD6813100E2FC88 /* Reminder.h */,
+				8A4A2C991AD6813100E2FC88 /* Reminder.m */,
 			);
 			path = week4lab;
 			sourceTree = "<group>";
@@ -219,8 +244,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A4A2C911AD680EF00E2FC88 /* EditReminderViewController.m in Sources */,
+				8A4A2C8E1AD680CD00E2FC88 /* AddReminderViewController.m in Sources */,
 				8A4A2C6F1AD67FF200E2FC88 /* ViewController.m in Sources */,
+				8A4A2C9A1AD6813100E2FC88 /* Reminder.m in Sources */,
 				8A4A2C6C1AD67FF200E2FC88 /* AppDelegate.m in Sources */,
+				8A4A2C971AD6811900E2FC88 /* ReminderCell.m in Sources */,
+				8A4A2C941AD6810A00E2FC88 /* ReminderListViewController.m in Sources */,
 				8A4A2C691AD67FF200E2FC88 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
