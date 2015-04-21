@@ -22,7 +22,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *descriptionTextField;
 @property (weak, nonatomic) IBOutlet UIDatePicker *dueDatePicker;
 
-- (IBAction)submitButton:(id)sender;
+-(IBAction)submitButton:(id)sender;
+-(void) alert:(NSString *)text;
 
 @property (weak, nonatomic) id<addReminderProtocol> delegate;
 

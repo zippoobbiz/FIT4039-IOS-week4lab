@@ -43,7 +43,7 @@
     NSString* title = self.titleTextField.text;
     NSString* description = self.descriptionTextField.text;
     
-    if (!title)
+    if (!title||!description)
     {
         NSLog(@"NO INPUT.");
     }
@@ -51,10 +51,16 @@
     {
         if ([title length] == 0)
         {
-            NSLog(@"NO INPUT.");
+            [self.titleTextField becomeFirstResponder];
+            [self alert:@"Please input title!"];
+            NSLog(@"NO Title.");
         }
-        else
+        else if([description length] == 0)
         {
+            [self.descriptionTextField becomeFirstResponder];
+            [self alert:@"Please input description!"];
+            NSLog(@"NO Description.");
+        }else{
             NSDate* date = self.dueDatePicker.date;
             BOOL completed = NO;
             
@@ -63,6 +69,12 @@
             [self.navigationController popViewControllerAnimated:YES];
         }
     }
+}
+
+-(void) alert:(NSString *)text{
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:text delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil];
+    alert.alertViewStyle = UIAlertViewStyleDefault;
+    [alert show];
 }
 
 @end
