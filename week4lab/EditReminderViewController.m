@@ -18,19 +18,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    _titleLabel.text = [[NSString alloc] initWithFormat:@"Title: %@"
-                        ,_currentReminder.title];
-    _descriptionLabel.text = [[NSString alloc] initWithFormat:@"Description: %@"
-                              ,_currentReminder.descriptions];
+    //set all details of a reminder
+    _titleLabel.text = _currentReminder.title;
+    _descriptionLabel.text = _currentReminder.descriptions;
     
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    dateFormatter.DateFormat =@"yyyy-MM-dd' 'HH:mm:ss";
+    dateFormatter.dateFormat =@"yyyy-MM-dd";
     
-    _dueDateLabel.text = [[NSString alloc] initWithFormat:@"Due date: %@"
-                          ,[dateFormatter stringFromDate:_currentReminder.dueDate]];
+    _dueDateLabel.text = [dateFormatter stringFromDate:_currentReminder.dueDate];
     [_completedSwitch setOn:_currentReminder.completed];
     
+    //create save button by coding
     UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(save:)];
     self.navigationItem.rightBarButtonItem = anotherButton;
     
@@ -58,6 +57,7 @@
 
 - (IBAction)save:(id)sender{
     
+    //get the status of switch
     if(_completedSwitch.on)
     {
         _currentReminder.completed = YES;
@@ -65,6 +65,7 @@
         _currentReminder.completed = NO;
     }
     
+    //call editReminder by delegate
     [self.delegate editReminder:_currentReminder];
     [self.navigationController popViewControllerAnimated:YES];
 }

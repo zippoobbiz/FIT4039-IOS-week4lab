@@ -53,6 +53,7 @@
 
 - (void)addReminder:(Reminder *)reminder{
     [self.currentList addObject:reminder];
+    //sort
     self.currentList = [[NSMutableArray alloc] initWithArray:[self.currentList sortedArrayUsingComparator:^NSComparisonResult(id a, id b) {
         NSDate *first = [(Reminder*)a dueDate];
         NSDate *second = [(Reminder*)b dueDate];
@@ -62,7 +63,10 @@
 }
 
 - (void)editReminder:(Reminder *)reminder{
-    
+    //Since the reminder that is being edited is sharing the same address with the list item in memory. So it is not necessary to do any further operation.
+    //However, I do have a function called to update this reminder in the list.
+    //Without the following line, the program should perform all the same.
+    [self.currentList setObject:reminder atIndexedSubscript:self.currentIndex];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -75,22 +79,24 @@
         _editcontroller = segue.destinationViewController;
         _editcontroller.delegate = self;
     }
-}
+}//set segue for add and edit controller
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ReminderCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ReminderCell" forIndexPath:indexPath];
     Reminder* r = [self.currentList objectAtIndex:indexPath.row];
-    cell.titleLabel.text = [[NSString alloc] initWithFormat:@"Title: %@",r.title];
+    cell.titleLabel.text = r.title;
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    dateFormatter.DateFormat =@"yyyy-MM-dd";
-    cell.dueDateLabel.text = [[NSString alloc] initWithFormat:@"Due date: %@",[dateFormatter stringFromDate:r.dueDate]];
+    dateFormatter.dateFormat =@"yyyy-MM-dd";
+    cell.dueDateLabel.text = [dateFormatter stringFromDate:r.dueDate];
     // Configure the cell...
     
     return cell;
-}
+}//construct each cell
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"did select at %ld",indexPath.row);
-    self.currentIndex = indexPath.row;
+    self.currentIndex = (int)indexPath.row;
     _editcontroller.currentReminder = [self.currentList objectAtIndex:indexPath.row];
 }
 

@@ -19,6 +19,10 @@
     // Do any additional setup after loading the view.
     UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Add" style:UIBarButtonItemStylePlain target:self action:@selector(submitButton:)];
     self.navigationItem.rightBarButtonItem = anotherButton;
+    
+    //provide sample for user to do a quick add
+    _titleTextField.text = @"sample title";
+    _descriptionTextField.text = @"sample description";
 }
 
 - (void)didReceiveMemoryWarning {
